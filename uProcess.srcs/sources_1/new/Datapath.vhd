@@ -129,7 +129,7 @@ component ALU_flags
          );
 end component;
 
-component PersonalMux2 
+component PersonalMux 
     port(d0, d1: in STD_LOGIC_VECTOR(31 downto 0);
          s: in STD_LOGIC;
          y: out STD_LOGIC_VECTOR(31 downto 0));
@@ -210,7 +210,7 @@ ControlPathInst: ControlPath
         
 
 
-PersonalMux2inst1: PersonalMux2 
+PersonalMuxinst1: PersonalMux 
     port map(
         d0 => "0000000000000000000000000000" & Instruction(19 downto 16),  -- 28-bit zero
         d1 => "0000000000000000000000000000000" & Instruction(15),
@@ -218,7 +218,7 @@ PersonalMux2inst1: PersonalMux2
         y => RA1
     );
     
-PersonalMux2inst2: PersonalMux2 
+PersonalMuxinst2: PersonalMux 
     port map(
         d0 => 28x"0" & Instruction(3 downto 0),
         d1 => 28x"0" & Instruction(15 downto 12), 
@@ -245,7 +245,7 @@ Extendinst: Extend
         extended => ExtImm
     );
     
-PersonalMux2inst3: PersonalMux2 
+PersonalMuxinst3: PersonalMux 
         port map(
             d0 => WriteData,
             d1 => ExtImm,
@@ -278,7 +278,7 @@ DataMemInst: DataMem
         
         
 
-PersonalMux2inst4: PersonalMux2 
+PersonalMuxinst4: PersonalMux 
     port map(
         d0 => s_ALUResult,
         d1 => ReadData,
@@ -292,7 +292,7 @@ PersonalMux2inst4: PersonalMux2
     
     
 --AJOUT LABORATOIRE 4
-    PcMux: PersonalMux2 
+    PcMux: PersonalMux 
     port map(
         d0 => PCPlus4,
         d1 => s_ALUResult,

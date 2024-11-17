@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 09/30/2024 01:16:16 AM
+-- Create Date: 09/30/2024 02:11:19 AM
 -- Design Name: 
--- Module Name: mux4 - Behavioral
+-- Module Name: PersonalMux - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,30 +31,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity mux4 is
---  Port ( );
-
-    port(d0, d1, d2, d3: in STD_LOGIC_VECTOR(31 downto 0);
-         s: in STD_LOGIC_VECTOR(1 downto 0);
+entity PersonalMux is
+    port(d0, d1: in STD_LOGIC_VECTOR(31 downto 0);
+         s: in STD_LOGIC;
          y: out STD_LOGIC_VECTOR(31 downto 0));
-end mux4;
+end PersonalMux;
 
-architecture Behavioral of mux4 is
-    component PersonalMux
-        port(d0, d1: in STD_LOGIC_VECTOR(31 downto 0);
-            s: in STD_LOGIC;
-            y: out STD_LOGIC_VECTOR(31 downto 0));
-    end component;
-    
-    
-    signal low, high: STD_LOGIC_VECTOR(31 downto 0);
-    
-    
+architecture Behavioral of PersonalMux is
+
 begin
-    lowmux: PersonalMux port map  (d0, d1, s(0), low);  
-    highmux: PersonalMux port map (d2, d3, s(0), high);
-    finalmux: PersonalMux port map (low, high, s(1), y);
-
-    
+    y<= d1 when s='1' else d0;
 
 end Behavioral;
