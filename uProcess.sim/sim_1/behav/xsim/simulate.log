@@ -1,0 +1,46 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Note: Error: ExpectedALUResult = 00000000
+Time: 12 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedALUResult = 00000000
+Time: 22 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedALUResult = 00000000
+Time: 32 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedALUResult = 00000000
+Time: 42 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedData = 00000000
+Time: 42 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedALUResult = 00000000
+Time: 52 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedData = 00000000
+Time: 52 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedALUResult = 00000000
+Time: 62 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedData = 00000000
+Time: 62 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedALUResult = 00000000
+Time: 72 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedData = 00000000
+Time: 72 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedALUResult = 00000000
+Time: 82 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedData = 00000000
+Time: 82 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedALUResult = 00000000
+Time: 102 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedData = 00000000
+Time: 102 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedALUResult = 00000000
+Time: 112 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedALUResult = 00000064
+Time: 122 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedData = 00000000
+Time: 122 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedALUResult = 0000000A
+Time: 132 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedData = 00000000
+Time: 132 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedALUResult = 0000000D
+Time: 142 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sim_1/new/tb_datapath.vhd
+Note: Error: ExpectedALUResult = 0000000E
+Time: 152 ns  Iteration: 0  Process: /tb_datapath/line__91  File: C:/Users/Pietr/Desktop/GEI1084/uProcess/uProc
