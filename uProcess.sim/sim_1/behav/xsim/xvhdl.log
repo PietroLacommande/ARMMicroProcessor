@@ -1,6 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sources_1/new/Datapath.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity Datapath
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sources_1/new/mux4.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity mux4
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Pietr/Desktop/GEI1084/uProcess/uProcess.srcs/sources_1/new/PersonalMux.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity PersonalMux
