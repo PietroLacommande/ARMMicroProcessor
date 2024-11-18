@@ -43,10 +43,12 @@ end RegisterFile;
 
 architecture Behavioral of RegisterFile is
     type mem_array is array (15 downto 0) of STD_LOGIC_VECTOR (31 downto 0);
-    signal Mem : mem_array:= (X"00000000",X"00000000",X"00000000",X"00000000",
-                             X"00000000",X"00000000", X"00000000",X"00000000",
-                             X"00000000",X"00000000",X"00000000",X"00000000",
-                             X"00000000",X"00000000",X"00000000",X"00000000");
+    signal Mem : mem_array:= (
+                            0 => "00000000000000000000000000000011", --first value is 3 
+                            1 => "00000000000000000000000000000011", --second value is 3 
+
+                            others => (others => '0')
+                              );
 begin
 
 process(A1,A2)

@@ -36,7 +36,9 @@ entity AluDecoder is
             Funct: in STD_LOGIC_VECTOR(4 downto 0);
             ALUOp: in STD_LOGIC; 
             ALUControl: out STD_LOGIC_VECTOR(1 downto 0);
-            FlagW: out STD_LOGIC_VECTOR(1 downto 0)
+            FlagW: out STD_LOGIC_VECTOR(1 downto 0);
+            NoWrite: out STD_LOGIC
+
             );
         
 end AluDecoder;
@@ -52,13 +54,14 @@ process(Funct, ALUOp) begin
         when '0' =>
             ALUControl<= "00";
             FlagW<= "00";
-
+            NoWrite <= '0';
 
          when '1' =>
          
             if(Funct(4 downto 1) = "0100") then
                 ALUControl<= "00";
-                
+                NoWrite <= '0';
+
                 if(Funct(0) ='0') then
                     FlagW<= "00";
                 
@@ -69,7 +72,8 @@ process(Funct, ALUOp) begin
             
             elsif(Funct(4 downto 1) = "0010") then
                 ALUControl<= "01";
-                
+                NoWrite <= '0';
+
                 if(Funct(0) ='0') then
                     FlagW<= "00";
                 
@@ -79,7 +83,8 @@ process(Funct, ALUOp) begin
             
             elsif(Funct(4 downto 1) = "0000") then
                 ALUControl<= "10";
-                
+                NoWrite <= '0';
+
                 if(Funct(0) ='0') then
                     FlagW<= "00";
                 
@@ -90,18 +95,33 @@ process(Funct, ALUOp) begin
                 
             elsif(Funct(4 downto 1) = "1100") then
                 ALUControl<= "11";
-                
+                NoWrite <= '0';
+
                 if(Funct(0) ='0') then
                     FlagW<= "00";
                 
                 elsif(Funct(0) ='1') then 
                     FlagW<= "10";
                 end if;
+                
+                
+            elsif(Funct(4 downto 1) = "1010") then
+                
+                if(Funct(0) ='1') then
+                    FlagW<= "11";
+                    ALUControl<= "01";
+                    NoWrite <= '1';
+
+                
+                end if;    
             
             end if;
+          
           when others =>
               ALUControl<= "--"; 
-              FlagW<= "--";       
+              FlagW<= "--";
+              NoWrite <= '-';
+       
       end case;   
       
          

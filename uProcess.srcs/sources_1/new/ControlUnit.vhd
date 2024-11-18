@@ -39,7 +39,7 @@ port(
         Funct: in STD_LOGIC_VECTOR(5 downto 0);
         Rd: in STD_LOGIC_VECTOR(3 downto 0); 
 --        Flags: in STD_LOGIC_VECTOR(3 downto 0);  --pour le labo #4
-        
+        NoWrite: out STD_LOGIC;
 
         MemtoReg: out STD_LOGIC; 
         MemWrite: out STD_LOGIC;   
@@ -78,7 +78,9 @@ component AluDecoder is
             Funct: in STD_LOGIC_VECTOR(4 downto 0);
             ALUOp: in STD_LOGIC; 
             ALUControl: out STD_LOGIC_VECTOR(1 downto 0);
-            FlagW: out STD_LOGIC_VECTOR(1 downto 0)
+            FlagW: out STD_LOGIC_VECTOR(1 downto 0);
+            NoWrite: out STD_LOGIC
+
             );
         
 end component;
@@ -109,6 +111,7 @@ AluDecoderInst1: AluDecoder
        Funct => Funct(4 downto 0),
        ALUOp => s_AluOp,
        ALUControl => ALUControl,
-       FlagW => FlagW
+       FlagW => FlagW, 
+       NoWrite=> NoWrite
        );
 end Behavioral;

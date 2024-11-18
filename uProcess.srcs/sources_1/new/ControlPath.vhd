@@ -68,7 +68,8 @@ port(
         Funct: in STD_LOGIC_VECTOR(5 downto 0);
         Rd: in STD_LOGIC_VECTOR(3 downto 0); 
         
-
+        
+        NoWrite: out STD_LOGIC;
         MemtoReg: out STD_LOGIC; 
         MemWrite: out STD_LOGIC;   
         ALUControl: out STD_LOGIC_VECTOR(1 downto 0);
@@ -92,7 +93,8 @@ component RegisterFlags is
         Clock: in STD_LOGIC;
         Reset: in STD_LOGIC;
         Cond: in STD_LOGIC_VECTOR(3 downto 0); 
-        
+        NoWrite: in STD_LOGIC;
+
         
 --        PCSrc: out STD_LOGIC; 
         RegWrite: out STD_LOGIC;   
@@ -100,13 +102,13 @@ component RegisterFlags is
         ); 
         
 end component;
-
+signal s_NoWrite: STD_LOGIC;
 begin
 ControlUnitInst: ControlUnit port map(
     Op => Op,
     Funct => Funct,
     Rd => Rd,
-
+    NoWrite=> s_NoWrite,
     MemtoReg => MemtoReg,
     MemWrite => MemW,
     ALUControl => AluControl,
@@ -130,7 +132,8 @@ RegisterFlagsInst: RegisterFlags  port map(
         
 --        PCSrc => 
         RegWrite => RegWrite,
-        MemWrite => MemWrite
+        MemWrite => MemWrite,
+        NoWrite =>s_NoWrite
         ); 
 
 end Behavioral;

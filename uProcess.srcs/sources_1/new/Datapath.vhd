@@ -37,32 +37,15 @@ entity Datapath is
         Clock: in STD_LOGIC;
         Reset: in STD_LOGIC;
         ALUResult: inout STD_LOGIC_VECTOR(31 downto 0);
-        WriteData: inout STD_LOGIC_VECTOR(31 downto 0)
-        );
+        WriteData: inout STD_LOGIC_VECTOR(31 downto 0);
+        
+        o_ZeroFlag: inout STD_LOGIC;
+        o_RegWrite: inout STD_LOGIC
+                );
 
 end Datapath;
 
 architecture Behavioral of Datapath is
-
---component ControlUnit is
---port(
-----        Cond: in STD_LOGIC_VECTOR(3 downto 0); 
---        Op: in STD_LOGIC_VECTOR(1 downto 0);   
---        Funct: in STD_LOGIC_VECTOR(5 downto 0);
---        Rd: in STD_LOGIC_VECTOR(3 downto 0); 
-----        Flags: in STD_LOGIC_VECTOR(3 downto 0);  --pour le labo #4
-        
-
---        MemtoReg: out STD_LOGIC; 
---        MemWrite: out STD_LOGIC;   
---        ALUControl: out STD_LOGIC_VECTOR(1 downto 0);
---        ALUSrc: out STD_LOGIC; 
---        ImmSrc: out STD_LOGIC_VECTOR(1 downto 0);  
---        RegWrite: out STD_LOGIC;
---        RegSrc: out STD_LOGIC_VECTOR(1 downto 0)
---        ); 
-        
---end component;
 
 component ControlPath is
 --  Port ( );
@@ -170,22 +153,9 @@ signal PCPlus4, PCPlus8 : STD_LOGIC_VECTOR(31 downto 0);
 begin
 ALUResult<= s_ALUResult;
 WriteData <= s_WriteData;
---ControlUnitInst1: ControlUnit
---    port map(
-----        Cond => Instruction(31 downto 28),
---        Op => Instruction(27 downto 26),
---        Funct => Instruction(25 downto 20),
---        Rd => Instruction(15 downto 12),
-----        Flags=> (others => 'X'), --pour le labo #4
-        
---         MemtoReg => MemtoReg,
---         MemWrite => MemWrite,
---         ALUControl => ALUControl,
---         ALUSrc => ALUSrc,
---         ImmSrc => ImmSrc,
---         RegWrite => RegWrite,
---         RegSrc => RegSrc
---    );
+o_ZeroFlag <= flag_Zero;
+o_RegWrite <= RegWrite;
+
 
 ControlPathInst: ControlPath
     port map(

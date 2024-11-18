@@ -42,7 +42,7 @@
             Clock: in STD_LOGIC;
             Reset: in STD_LOGIC;
             Cond: in STD_LOGIC_VECTOR(3 downto 0); 
-            
+            NoWrite: in STD_LOGIC;
             
 --            PCSrc: out STD_LOGIC; 
             RegWrite: out STD_LOGIC;   
@@ -85,7 +85,7 @@
     begin
     
     --    PCSrc <= PCS and s_CondEx;
-        RegWrite <= RegW and s_CondEx;
+        RegWrite <= (RegW) and (s_CondEx) and (not(NoWrite));
         MemWrite <= MemW and s_CondEx;
         FlagWrite1<= FlagW(1) and s_CondEx;
         FlagWrite0<= FlagW(0) and s_CondEx;
