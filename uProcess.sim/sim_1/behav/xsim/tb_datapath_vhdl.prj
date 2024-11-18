@@ -30,5 +30,8 @@ vhdl2008 xil_defaultlib  \
 "../../../../uProcess.srcs/sim_1/new/tb_mainDecoder.vhd" \
 "../../../../uProcess.srcs/sim_1/new/tb_aluDecoder.vhd" \
 
+vhdl xil_defaultlib  \
+"../../../../uProcess.srcs/sim_1/new/InstructionMemoryTb.vhd" \
+
 # Do not sort compile order
 nosort

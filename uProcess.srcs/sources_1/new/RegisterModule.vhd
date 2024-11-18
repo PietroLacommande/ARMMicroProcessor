@@ -49,7 +49,7 @@ architecture Behavioral of RegisterModule is
 
 
 begin
-    process(CLK, reset)
+    process(CLK, reset, data_in)
     begin 
         if reset='1' then 
             data_out<= (others => '0');
