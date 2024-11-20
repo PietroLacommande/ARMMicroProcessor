@@ -1,0 +1,18 @@
+# Vivado Cache
+uProcess.cache/
+uProcess.hw/
+uProcess.ip_user_files/
+uProcess.sim/
+
+# Simulation Files
+xsim/
+
+# Vivado Project File
+*.xpr
+
+# Temporary Files
+*.log
+*.jou
+*.str
+*.tmp
+*.backup
