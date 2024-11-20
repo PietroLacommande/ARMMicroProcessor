@@ -137,6 +137,18 @@ component Additionneur is
 end component;
 
 
+component Shift is
+--  Port ( );
+    port(  
+        control: in STD_LOGIC_VECTOR(6 downto 0);
+        inputValue : in STD_LOGIC_VECTOR(31 downto 0);
+        outputValue : out STD_LOGIC_VECTOR(31 downto 0));
+
+end component;
+
+
+
+
 signal RA1, RA2, SrcA, SrcB, ExtImm, ReadData : STD_LOGIC_VECTOR(31 downto 0);
 signal MemtoReg, MemWrite, ALUSrc, RegWrite: STD_LOGIC; 
 signal ALUControl, ImmSrc, RegSrc: STD_LOGIC_VECTOR(1 downto 0);
@@ -148,6 +160,9 @@ signal s_PCprime: STD_LOGIC_VECTOR(31 downto 0);
 signal Instruction:  STD_LOGIC_VECTOR(31 downto 0);
 signal s_PcOut: STD_LOGIC_VECTOR(31 downto 0);
 signal PCPlus4, PCPlus8 : STD_LOGIC_VECTOR(31 downto 0);
+
+
+signal o_shift: STD_LOGIC_VECTOR(31 downto 0);
 
 
 begin
@@ -217,7 +232,7 @@ Extendinst: Extend
     
 PersonalMuxinst3: PersonalMux 
         port map(
-            d0 => WriteData,
+            d0 => o_shift,
             d1 => ExtImm,
             s => ALUSrc,
             y => SrcB
@@ -292,5 +307,11 @@ AdditionneurInst8:Additionneur
             b => PCPlus4,
             y => PCPlus8);
                             
+
+ShiftInst:Shift 
+    port map(  
+        control =>Instruction(11 downto 5),
+        inputValue => s_WriteData,
+        outputValue => o_shift);
 
 end Behavioral;

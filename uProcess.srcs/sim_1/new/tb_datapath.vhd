@@ -45,7 +45,7 @@ component Datapath is
         Clock: in STD_LOGIC;
         Reset: in STD_LOGIC;
         ALUResult: inout STD_LOGIC_VECTOR(31 downto 0);
-        WriteData: inout STD_LOGIC_VECTOR(31 downto 0);
+--        WriteData: inout STD_LOGIC_VECTOR(31 downto 0);
         
         o_ZeroFlag: inout STD_LOGIC;
         o_RegWrite: inout STD_LOGIC
@@ -57,7 +57,7 @@ end component;
 
 --declare signals in and out of component
 signal o_S_ALUResult: STD_LOGIC_VECTOR(31 downto 0);
-signal o_S_WriteData: STD_LOGIC_VECTOR(31 downto 0);
+--signal o_S_WriteData: STD_LOGIC_VECTOR(31 downto 0);
 signal s_o_ZeroFlag: STD_LOGIC;
 signal s_o_RegWrite:  STD_LOGIC;
 signal i_Clock: STD_LOGIC;
@@ -73,7 +73,7 @@ port map(
      Clock =>i_Clock,
      Reset =>i_Reset,
      ALUResult => o_S_ALUResult,
-     WriteData => o_S_WriteData,
+--     WriteData => o_S_WriteData,
       o_ZeroFlag=> s_o_ZeroFlag,
       o_RegWrite=> s_o_RegWrite
 );
